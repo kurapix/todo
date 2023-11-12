@@ -8,9 +8,9 @@
 #include <string.h>
 
 typedef struct todo {
-  char task[200];
-  int task_number;
-  struct todo *next_task;
+    char task[200];
+    int task_number;
+    struct todo *next_task;
 } ToDo;
 
 void add_task(ToDo **head);
