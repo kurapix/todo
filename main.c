@@ -67,28 +67,28 @@ int main(void)
         int option = user_input_option(&head);
 
         switch (option) {
-        case 'a':
-            add_task(&head);
-            break;
-        case 'v':
-            print_todo_list(head);
-            break;
-        case 'r':
-            remove_task(&head);
-            break;
-        case 'e':
-            edit_task(&head);
-            break;
-        case 'h':
-            program_guide();
-            break;
-        case 's':
-            save_tasks_to_file(head);
-            remove_all_tasks(&head); // Liberta a memória dinâmica
-            puts("\nSaíste do programa");
-            return 0;
-        default:
-            puts("\nOpção inválida");
+            case 'a':
+                add_task(&head);
+                break;
+            case 'v':
+                print_todo_list(head);
+                break;
+            case 'r':
+                remove_task(&head);
+                break;
+            case 'e':
+                edit_task(&head);
+                break;
+            case 'h':
+                program_guide();
+                break;
+            case 's':
+                save_tasks_to_file(head);
+                remove_all_tasks(&head); // Liberta a memória dinâmica
+                puts("\nSaíste do programa");
+                return 0;
+            default:
+                puts("\nOpção inválida");
         }
     }
 }
