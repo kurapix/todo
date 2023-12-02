@@ -1,3 +1,7 @@
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+
 #include "todolist.h"
 
 static void program_guide(void)
@@ -29,8 +33,7 @@ static int user_input_option(ToDo **head)
          * caracteres que foram inseridos a mais no stdin */
         if (!first_time) {
             int discard;
-            while ((discard = getchar()) != '\n' && discard != EOF) {
-            }
+            while ((discard = getchar()) != '\n' && discard != EOF) {}
         }
 
         printf("\nEscolhe uma opção: ");

@@ -1,12 +1,6 @@
 #ifndef TODOLIST_H
 #define TODOLIST_H
 
-#include <limits.h>
-#include <stdbool.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-
 typedef struct todo {
     char task[200];
     int task_number;

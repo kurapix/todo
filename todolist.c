@@ -1,3 +1,9 @@
+#include <limits.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
 #include "todolist.h"
 
 static void user_input_task(ToDo *node, ToDo **head, bool add_task_function)
@@ -8,8 +14,7 @@ static void user_input_task(ToDo *node, ToDo **head, bool add_task_function)
          * que foram inseridos a mais no stdin */
         if (!first_time) {
             int discard;
-            while ((discard = getchar()) != '\n' && discard != EOF) {
-            }
+            while ((discard = getchar()) != '\n' && discard != EOF) {}
         }
         printf("\nEscreve a tarefa: ");
         if (fgets(node->task, sizeof(node->task), stdin) == NULL) {
@@ -105,8 +110,7 @@ static int user_input_number(ToDo **head, bool remove_task_function)
          * caracteres que foram inseridos a mais no stdin */
         if (!first_time) {
             int discard;
-            while ((discard = getchar()) != '\n' && discard != EOF) {
-            }
+            while ((discard = getchar()) != '\n' && discard != EOF) {}
         }
         if (remove_task_function) {
             printf("\nEscolhe o número da tarefa que queres remover: ");
