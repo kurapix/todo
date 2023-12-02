@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror 
+CFLAGS = -Wall -Wextra -Werror
 OBJS = main.o todolist.o
 BIN = todolist
 
@@ -11,5 +11,5 @@ $(BIN): $(OBJS)
 %.o: %.c todolist.h
 	$(CC) $(CFLAGS) -c $<
 
-clean: 
+clean:
 	rm -f $(OBJS) $(BIN)
